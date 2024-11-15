@@ -30,9 +30,8 @@ current_time = datetime.datetime.now()
 current_hour = current_time.hour
 
 if 5 <= current_hour < 12:
-    greeter_morning.print_greeting(f"it is {current_time.strftime('%H:%M:%S')}!")
+    greeter_morning.print_greeting(f"it is {current_time.strftime('%D')}!")
 elif 12 <= current_hour < 18:
-    greeter_evening.print_greeting(f"it is {current_time.strftime('%H:%M:%S')}!")
+    greeter_evening.print_greeting(f"it is {current_time.strftime('%D:%M:%Y:%H:%M:')}!")
 else:
-    greeter_farewell.print_greeting(f"it is {current_time.strftime('%H:%M:%S')}!")
-
+    greeter_farewell.print_greeting(f"it is {current_time.strftime('%M:%D:%Y:%H:%M:')}!")
