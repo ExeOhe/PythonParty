@@ -23,15 +23,15 @@ name = input("What is your name? ")
 # This is an object instantiation. It creates an instance of the class.
 greeter_morning = Greeter(f"Good Morning, {name}!")
 greeter_evening = Greeter(f"Good Evening, {name}!")
-greeter_farewell = Greeter(f"Goodbye, {name}!")
+greeter_farewell = Greeter(f"Goodnight, {name}!")
 
 # Determine the current time of day
 current_time = datetime.datetime.now()
 current_hour = current_time.hour
 
 if 5 <= current_hour < 12:
-    greeter_morning.print_greeting(f"it is {current_time.strftime('%D')}!")
+    greeter_morning.print_greeting(f"it is {current_time.strftime('%m/%d/%Y %H:%M:%S')}!")
 elif 12 <= current_hour < 18:
-    greeter_evening.print_greeting(f"it is {current_time.strftime('%D:%M:%Y:%H:%M:')}!")
+    greeter_evening.print_greeting(f"it is {current_time.strftime('%m/%d/%Y %H:%M:%S')}!")
 else:
-    greeter_farewell.print_greeting(f"it is {current_time.strftime('%M:%D:%Y:%H:%M:')}!")
+    greeter_farewell.print_greeting(f"it is {current_time.strftime('%m/%d/%Y %H:%M:%S')}!")
